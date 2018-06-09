@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #employeeForm = "ngForm" (ngSubmit)="addEmployee 
+          (employeeForm)">
+          <div class="row">
+            <div class = "input-field col s12">
+              <!-- aca es donde a Rodrigo le da error cuando coloca el #name="ngModel", majo si podes agregalo y
+              ver si anda en tu compu-->
+              <input type="text" name = "name" [
+              (ngModel)]="">
+
+            </div>
+          </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+
+    </div>
+  </div>
+</div>
