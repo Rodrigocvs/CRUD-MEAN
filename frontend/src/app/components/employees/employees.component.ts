@@ -24,14 +24,14 @@ export class EmployeesComponent implements OnInit {
       this.employeeService.putEmployee(form.value)
         .subscribe(res => {
           this.resetForm(form);
-         M.toast({html: ' se ha actualizado, negri'});
+         M.toast({html: ' se ha actualizado'});
          this.getEmployyes();
         })
     } else {
       this.employeeService.postEmployee(form.value)
       .subscribe( res =>{
         this.resetForm(form);
-        M.toast({html: 'empleado guardado, negri'});
+        M.toast({html: 'empleado guardado'});
         this.getEmployyes();
       });
     }
@@ -48,11 +48,11 @@ getEmployyes() {
     this.employeeService.selectedEmployee = employee;
   }
   deleteEmployee(_id: string){
-    if (confirm('Are u sure?, negri')) {
+    if (confirm('Are u sure?')) {
       this.employeeService.deleteEmployee(_id)
       .subscribe(res => {
         this.getEmployyes();
-        M.toast({html: 'se ha eliminado, negro'});
+        M.toast({html: 'se ha eliminado exitosamente'});
       });
       
     }
