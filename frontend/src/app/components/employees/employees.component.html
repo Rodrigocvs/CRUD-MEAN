@@ -52,6 +52,7 @@
           <th>Nombre</th>
           <th>Posicion</th>
           <th>Oficio</th>
+          <th>Salario</th>
           <th>Operacion</th>
         </thead>
         <tbody>
@@ -59,6 +60,7 @@
               <td> {{ employee.name}} </td>
               <td> {{ employee.position}} </td>
               <td> {{ employee.office}} </td>
+              <td> {{ employee.salary}} </td>
               <td>
                 <a (click)= "editEmployee(employee)" >
                   <i class="material-icons">edit</i>
